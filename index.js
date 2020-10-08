@@ -8,6 +8,7 @@ app.use(express.json({extended: false}));
 const posts = {};
 
 app.get('/posts', (req, res) => {
+    console.log(`returing all posts: ${JSON.stringify(Object.values(posts))}`);
     res.send(Object.values(posts));
 });
 
