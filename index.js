@@ -3,6 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 const hasBadWords = require('./bad_words');
 
 const app = express();
+app.use(express.json({extended: false}));
 
 const posts = {};
 
